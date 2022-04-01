@@ -3,8 +3,8 @@ import 'dart:developer';
 
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/material.dart';
-import 'package:lab_1/data/product_repository.dart';
-import 'package:lab_1/pages/widgets/product_grid.dart';
+import 'package:lab_2/data/product_repository.dart';
+import 'package:lab_2/pages/widgets/product_grid.dart';
 
 import 'developers_page.dart';
 

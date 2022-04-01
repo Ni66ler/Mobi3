@@ -1,5 +1,5 @@
-import 'package:lab_1/data/remote_data_source.dart';
-import 'package:lab_1/entities/product.dart';
+import 'package:lab_2/data/remote_data_source.dart';
+import 'package:lab_2/entities/product.dart';
 
 class ProductRepository {
   static final RemoteDataSource _dataSource = RemoteDataSource();

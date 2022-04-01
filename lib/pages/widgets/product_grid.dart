@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:lab_1/entities/product.dart';
+import 'package:lab_2/entities/product.dart';
 
 class ProductGrid extends StatelessWidget {
   static const double _cardRatio = 3 / 4;

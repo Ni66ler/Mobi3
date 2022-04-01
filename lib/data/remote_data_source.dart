@@ -1,7 +1,7 @@
 import 'package:http/http.dart' as http;
 import 'package:html/parser.dart' as parser;
 import 'package:html/dom.dart';
-import 'package:lab_1/entities/product.dart';
+import 'package:lab_2/entities/product.dart';
 
 abstract class RemoteDataSource {
   factory RemoteDataSource() => _RemoteDataSource();
