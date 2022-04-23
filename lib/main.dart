@@ -1,24 +1,9 @@
-import 'dart:async';
-import 'package:connectivity_plus/connectivity_plus.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'data/remote_data_source.dart';
-import 'pages/main_page.dart';
+import 'package:lab_2/presentation/app/app.dart';
 
-late final String userID;
-
-void main() => initApp().whenComplete(() => runApp(const MyApp()));
-
-Future<void> initApp() async {}
-
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: MainPage(
-        title: 'shop',
-      ),
-    );
-  }
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+  runApp(const MyApp());
 }
