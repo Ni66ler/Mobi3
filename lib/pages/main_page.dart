@@ -23,7 +23,8 @@ class MainPage extends StatelessWidget {
 }
 
 class _MainPage extends StatefulWidget {
-  const _MainPage({Key? key, required this.title, required this.deviceWidth}) : super(key: key);
+  const _MainPage({Key? key, required this.title, required this.deviceWidth})
+      : super(key: key);
 
   final String title;
   final double deviceWidth;
@@ -32,7 +33,8 @@ class _MainPage extends StatefulWidget {
   State<_MainPage> createState() => _MainPageState();
 }
 
-class _MainPageState extends State<_MainPage> with SingleTickerProviderStateMixin {
+class _MainPageState extends State<_MainPage>
+    with SingleTickerProviderStateMixin {
   static final ProductRepository _repository = ProductRepository();
   ConnectivityResult? _connectivityResult;
   final TextEditingController _searchController = TextEditingController();
@@ -45,7 +47,8 @@ class _MainPageState extends State<_MainPage> with SingleTickerProviderStateMixi
     _checkConnectivityState().whenComplete(() {
       if (_connectivityResult != ConnectivityResult.wifi &&
           _connectivityResult != ConnectivityResult.mobile) {
-        _connectionTimer = Timer.periodic(const Duration(seconds: 3), _timerCallback);
+        _connectionTimer =
+            Timer.periodic(const Duration(seconds: 3), _timerCallback);
       }
     });
   }
@@ -130,7 +133,9 @@ class _MainPageState extends State<_MainPage> with SingleTickerProviderStateMixi
         child: Text('Нет соединения'),
       );
     } else {
-      return ProductGrid(products: _repository.getAllProducts(), search: _searchController.text);
+      return ProductGrid(
+          products: _repository.getAllProducts(),
+          search: _searchController.text);
     }
   }
 
