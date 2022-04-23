@@ -66,7 +66,9 @@ class _MainPageState extends State<_MainPage> with SingleTickerProviderStateMixi
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey,
       appBar: AppBar(
+        backgroundColor: Colors.greenAccent,
         title: Text(widget.title),
         actions: [
           IconButton(
@@ -84,7 +86,6 @@ class _MainPageState extends State<_MainPage> with SingleTickerProviderStateMixi
         ),
       ),
       body: _body(),
-      backgroundColor: Colors.white70,
     );
   }
 

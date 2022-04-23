@@ -3,33 +3,33 @@ import 'package:lab_2/entities/product.dart';
 
 class ProductRepository {
   static final RemoteDataSource _dataSource = RemoteDataSource();
-  static final List<Product> _sneakers = [];
-  static final List<Product> _robes = [];
+  static final List<Product> _borba = [];
+  static final List<Product> _plavki = [];
 
   Future<List<Product>> getAllProducts() async =>
-      [...(await getSneakers()), ...(await getRobes())];
+      [...(await getBorba()), ...(await getPlavki())];
 
-  Future<List<Product>> getSneakers() async {
-    if (_sneakers.isEmpty) {
-      _sneakers.addAll(await _dataSource.fetchProducts(url: ProductType.sneakers.url));
+  Future<List<Product>> getBorba() async {
+    if (_borba.isEmpty) {
+      _borba.addAll(await _dataSource.fetchProducts(url: ProductType.borba.url));
     }
-    return _sneakers;
+    return _borba;
   }
 
-  Future<List<Product>> getRobes() async {
-    if (_robes.isEmpty) {
-      _robes.addAll(await _dataSource.fetchProducts(url: ProductType.robes.url));
+  Future<List<Product>> getPlavki() async {
+    if (_plavki.isEmpty) {
+      _plavki.addAll(await _dataSource.fetchProducts(url: ProductType.plavki.url));
     }
-    return _robes;
+    return _plavki;
   }
 }
 
-enum ProductType { sneakers, robes }
+enum ProductType { borba, plavki }
 
 extension ProductExtensions on ProductType {
   static const Map<ProductType, String> _urls = {
-    ProductType.sneakers: 'https://by.wildberries.ru/catalog/obuv/muzhskaya/kedy-i-krossovki',
-    ProductType.robes: 'https://by.wildberries.ru/catalog/muzhchinam/halaty',
+    ProductType.borba: 'https://by.wildberries.ru/catalog/sport/edinoborstva/borba',
+    ProductType.plavki: 'https://by.wildberries.ru/catalog/sport/dlya-muzhchin/bele-i-plavki',
   };
 
   String get url => _urls[this]!;

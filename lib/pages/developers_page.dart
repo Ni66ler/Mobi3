@@ -6,7 +6,9 @@ class DevelopersPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey,
       appBar: AppBar(
+        backgroundColor: Colors.greenAccent,
         title: const Text('Developer\'s page'),
       ),
       body: Container(
@@ -22,7 +24,7 @@ class DevelopersPage extends StatelessWidget {
             ),
             const SizedBox(height: 15),
             const Text(
-              'Даниил Шевченко',
+              'Костян Владислав',
               style: TextStyle(fontSize: 25),
             ),
             const SizedBox(height: 5),
@@ -34,7 +36,7 @@ class DevelopersPage extends StatelessWidget {
               height: 5,
             ),
             const Text(
-              'группа 951005',
+              'группа 951008',
               style: TextStyle(fontSize: 20),
             ),
             SizedBox(height: 5),

@@ -8,8 +8,7 @@ late final String userID;
 
 void main() => initApp().whenComplete(() => runApp(const MyApp()));
 
-Future<void> initApp() async {
-}
+Future<void> initApp() async {}
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
